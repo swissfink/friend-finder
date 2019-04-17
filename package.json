@@ -1,0 +1,24 @@
+{
+  "name": "friend-finder",
+  "version": "1.0.0",
+  "description": "A compatibility-based \"friend-finder\" application that uses Node and Express Servers.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swissfink/friend-finder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/swissfink/friend-finder/issues"
+  },
+  "homepage": "https://github.com/swissfink/friend-finder#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
