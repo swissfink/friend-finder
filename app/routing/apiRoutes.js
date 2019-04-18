@@ -10,8 +10,8 @@ module.exports = function (app) {
         if(friends.length < 5) {
             friends.push(req.body);
             res.json(true);
-        }else {
-            console.log("No more friends!")
+        } else {
+            console.log("No more friends allowed!")
             res.json(false);
         }
     });

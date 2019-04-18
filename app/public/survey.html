@@ -24,12 +24,6 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-  <!-- Google Fonts styles -->
-  <link href="https://fonts.googleapis.com/css?family=Just+Another+Hand" rel="stylesheet">
-
-  <!-- My styles -->
-  <link rel="stylesheet" type="text/css" href="../style/style.css">
-
 </head>
 
 <body>
@@ -175,14 +169,14 @@
       Submit</button>
 
     <hr>
+    <!-- Footer -->
     <footer class="footer">
       <div class="container">
-        <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/swissfink/friend-finder">GitHub
-            Repo</a></p>
+        <p><a href="/api/friends" target="_blank">API Friends List</a> | <a href="https://github.com/swissfink/friend-finder" target="_blank">GitHub Repo</a></p>
       </div>
     </footer>
 
-  </div>
+  </div> <!-- End of Container -->
 
   <!-- Modal -->
   <div id="results-modal" class="modal fade" role="dialog">
@@ -213,7 +207,7 @@
     // Capture the form inputs
     $("#submit").on("click", function (event) {
       event.preventDefault();
-
+      
       // Form validation
       function validateForm() {
 
@@ -257,16 +251,15 @@
             $("#q9").val(),
             $("#q10").val()
           ]
-        };
+        }
 
         // AJAX post the data to the friends API.
-        $.post("/api/friends", newFriend, function (data) {
+        $.post("/api/friends", newFriend, function(data) {
 
           if (data) {
             // Grab the result from the AJAX post so that the best match's name and photo are displayed.
             $("#match-name").text(data.name);
             $("#match-img").attr("src", data.photo);
-
             // Show the modal with the best match
             $("#results-modal").modal("toggle");
 
@@ -276,6 +269,7 @@
         });
       }
     });
+
   </script>
 
 </body>
